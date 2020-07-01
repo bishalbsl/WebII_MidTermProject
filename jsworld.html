@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Welcome to the world my Javascript
+	</title>
+	<meta charset="utf-8"><!--UTF-8 is use for the preferred encoding-->
+	<meta name="description" content=" Mid-term project of WEB II">
+    <meta name  ="keywords" content="kcgi,assignment, web,html,css,Javascript">
+    <meta name  ="author" content="Bishal Shakya">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<!--link for font icons-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--meta viewport thatcontrol the page direction and scaling-->
+
+	
+<script>
+
+		function showName(){
+			var n=document.form1.stname.value;
+			alert("Hello Mr./Ms. "+n);            
+			}
+
+		function sellGender(form1){
+			for(var i=0; i<document.form1.gender.length; i++){
+				if(document.form1.gender[i].checked){
+					alert("Your Gender is "+document.form1.gender[i].value);
+					return;
+				}
+			}
+		}
+	
+		function showLan() {
+			var chk= document.form1.language;
+			var txt = "";
+			var i;
+			for (i = 0; i < chk.length; i++) {
+				if (chk[i].checked) {
+				txt = txt + chk[i].value + " ";
+				}
+			}
+			alert("Your Selected language is "+txt);
+			}
+	
+		function selCoun(){
+			var counName=document.form1.country.value;
+			alert("Your country is "+counName);
+		}
+
+		function tend() {
+					document.getElementById('my').style.visibility='visible';
+				  }
+				  function tn() {
+					document.getElementById('my').style.visibility='hidden';
+				  }
+				  var w=null;
+		function openWindow(){
+			w=open("http://www.kcg.edu","KCGI", "width=800px, height=400px");     
+		}
+
+		function closeWindow(){
+			if(w){
+				w.close();
+				w=null;
+			}
+		}
+	</script>
+
+</head>
+<body>
+
+	
+<div class="container">
+	<header>
+	<h1>Welcome To My Website</h1>
+	<!--Header Navigation List-->
+		<div class="headermenu" id="myTopnav">
+			<a href="index.html" class="active"> <i class="fa fa-home"> Home</i></a>
+			<a href="introduction.html"><i class="fa fa-truck"> Introduction</i></a>
+			<a href="schoolme.html"><i class="fa fa-tasks"> School Me</i></a>
+			<a href="timetable.html"><i class="fa fa-cloud"> Time Table</i></a>
+			<a href="japanese.html"><i class="fa fa-book"> Japanese Study</i></a>
+			<a href="jsworld.html"><i class="fa fa-book"> JSworld</i></a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+		</div>
+	</header>
+
+	<div class="content">
+
+		<div class="menus">
+			<ul>
+				<li><a href="https://en.wikipedia.org/wiki/Nepal" target="_blank"> <i class="fa fa-home"> KCGI</i></a></li>
+				<li><a href="https://www.tripadvisor.com/Attractions-g293889-Activities-Nepal.html" target="_blank"><i class="fa fa-map-marker"> Annoucement</i></a></li>
+				<li><a href="https://www.welcomenepal.com/whats-on.html" target="_blank"><i class="fa fa-address-card"> Events</i></a></li>
+				<li></i><a href="https://www.welcomenepal.com/plan-your-trip/culture.html"><i class="fa fa-book"> Courselist</i></a></li>
+				<li><i><a href="https://www.nepaleverestbasecamp.com/blog/visit-nepal-2020-nepal-tourism-year-2020-what-to-expect-from-visit-nepal-2020.html"><i class="fa fa-info-circle"> Information</i></a></li>
+				<li></i><a href="https://www.wegotravel.jp/en/hotels/nepal?wg_source=google&wg_medium=sem&wg_campaign=796332633&wg_adgroup=42034272900&wg_content=189460449971&wg_term=%2Bhotels%20%2Bnepal%7cb&wg_misc=%7ckwd-24815911904%7c&gclid=Cj0KCQiAvc_xBRCYARIsAC5QT9kRA9iWT-85x5yU9peciBo7rY3hzKto_sx7DJlw3uEm54pt-cAfwYwaAo8fEALw_wcB"><i class="fa fa-hotel"> Kyoto</i></a></li>	
+				<li><a href="https://www.tiairport.com.np/all-flights"><i class="fa fa-plane"> Shedule</i></a></li>	
+			</ul>
+		</div>
+
+		<div class="subcontent">
+				<h2>Welcome to the world of Javascript</h2>
+				<fieldset>
+					<form name="form1" action="jsworld.html" post="get">
+						<label for="lname">Enter your Name: </label></br>
+						<input type="text" id="lname" name="stname" placeholder="Type Your Full Name.." value="">
+						<input type="button" value="Click" onclick="showName()"></br></br>
+						
+
+						<label for="lname">Please Select your Gender:</label></br></br>
+						<input type="radio" name="gender" value="Male" checked>Male
+						<input type="radio" name="gender" value="Female">Female
+						<input type="radio" name="gender" value="Others">Others &nbsp;
+						<input type="button" value="Click" onclick="sellGender()"></br></br></br>
+
+	
+						<label for="lname">Please Select the language you can speak:</label></br></br>
+						<input type="checkbox" name="language" value="Japanese" checked>Japanese
+						<input type="checkbox" name="language" value="English">English
+						<input type="checkbox" name="language" value="Nepali">Nepali
+						<input type="checkbox" name="language" value="Others">Others &nbsp;
+						<input type="button" value="Click" onclick="showLan()"></br></br></br>
+
+						<label for="interst">Please Select your Country</label>
+						<select id="#" name="country">
+						  <option value="Nepal">Nepal</option>
+						  <option value="Japan">Japan</option>
+						  <option value="China">China</option>
+						  <option value="other">Other</option>
+						</select>
+					</br>
+						<input type="submit" value="Submit" onclick="selCoun()">
+					  </form>
+				</fieldset>
+				
+				  For more about KCGI link click:
+				  <input type="button" value="Open" onclick="openWindow()">
+				  <input type="button" value="Close" onclick="closeWindow()">
+					<hr/>
+				 Photo Gallery:</br></br>
+				<span onclick=g.style.visibility="visible" style="background-color:blue; color: white;">Show Image</span>
+				<input type="button" onclick="tend()" value="More">
+				<input type="button" onclick="tn()" value="Close">
+
+				<span onclick=g.style.visibility="hidden" style="background-color:blue; color: white;">Hide Image</span><br/>
+
+				
+
+				 <img src="images/fewalake.jpg" onmouseover="this.src='images/m-campus.jpg'" 
+				 onmouseout="this.src='images/kathmandu.jpg'" width="300" height="200">
+				<img src="images/everest.jpg" onmouseover="this.src='images/bhaktapur.jpg'" 
+				onmouseout="this.src='images/nepal.jpg'" width="300" height="200">
+	
+				<img src="images/opening2020.jpg" name="g" width="300px" height="200px">
+				<img src ="images/mounteverest.jpg" id="my" width="300" height="200" style="visibility:hidden"/>
+			
+				
+	
+			</div>
+		
+
+	</div>
+	
+	<footer>
+		Design & Developed by: <a href="mailto:bsalsakya@gmail.com">Bishal Shakya@copyright 2020</a>
+	</footer>
+
+</div>
+
+	<script>
+		function myFunction() {
+		  var x = document.getElementById("myTopnav");
+		  if (x.className == "headermenu") {
+			x.className += "responsive";
+				  } 
+		  else {
+			x.className = "headermenu";
+				  }
+		}
+	</script>
+</body>
+</html>
